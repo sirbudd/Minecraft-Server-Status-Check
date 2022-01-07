@@ -20,7 +20,7 @@ def CheckServerStatus():
         logging.info(f"Players : {query.players.names}")
         logging.info(f"==============")
     except socket.timeout:
-        print("Socket timed out")
+        logging.error("Socket timed out")
         print("Maybe check your server's IP?")
 
 
