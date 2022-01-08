@@ -4,7 +4,6 @@ import smtplib
 import logging
 import json
 
-
 logging.basicConfig(filename='logs.log', level=logging.INFO,format='%(asctime)s:%(levelname)s:%(message)s') #logging file config
 
 #separate file for functions that are used globally
