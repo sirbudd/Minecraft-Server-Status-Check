@@ -1,5 +1,5 @@
 APScheduler==3.8.1
-apturl==0.5.2
+#apturl==0.5.2
 asyncio-dgram==1.2.0
 blinker==1.4
 Brlapi==0.8.2
