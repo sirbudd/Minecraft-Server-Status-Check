@@ -1,5 +1,3 @@
-#import pickle
-from multiprocessing import shared_memory
 import logging
 from mcstatus import MinecraftServer
 import socket
@@ -31,7 +29,10 @@ def CheckServerStatus():
     return status_report
 
 
-
-
 if __name__ == '__main__':
     CheckServerStatus()
+    flag = CheckServerStatus()
+    print(f"flag = {flag}")
+    if flag == 0:
+        send_email()
+        print("email sent!")
