@@ -1,3 +1,6 @@
 {
-    "server_ip": "157.90.221.188:6055"
+    "server_ip": "157.90.221.188:6055",
+    "sender_email_address" : "weather.app.test.python@gmail.com",
+    "receiver_email_address" : "dragos.daniel199@gmail.com",
+    "sender_password" : "Zalman123"
 }
