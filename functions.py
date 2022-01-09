@@ -1,4 +1,3 @@
-import pickle
 from multiprocessing import shared_memory
 import smtplib
 import logging
@@ -14,11 +13,9 @@ def open_cfg():
     Expected input : correct parameters from the cfg.json file
     Expected outpt : data loaded into data variable
     """
-    try:
-        jsonfile =  open("cfg.json", "r")
-        data = json.load(jsonfile)
-    except IOError:
-        print("Failed to read JSON Config File")    
+    jsonfile =  open("cfg.json", "r")
+    data = json.load(jsonfile)
+  
     return data
 
 
