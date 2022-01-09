@@ -13,9 +13,12 @@ def open_cfg():
     Expected input : correct parameters from the cfg.json file
     Expected outpt : data loaded into data variable
     """
-    jsonfile =  open("cfg.json", "r")
-    data = json.load(jsonfile)
-  
+    
+    try:
+        jsonfile =  open("cfg.json", "r")
+        data = json.load(jsonfile)
+    except IOError:
+        print("Failed to read JSON Config File")    
     return data
 
 
