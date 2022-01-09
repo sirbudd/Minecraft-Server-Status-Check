@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from multiprocessing import shared_memory
 import os
 import logging
