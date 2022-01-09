@@ -1,5 +1,5 @@
 from multiprocessing import shared_memory
-import smtplib
+import os
 import logging
 import json
 
@@ -14,11 +14,13 @@ def open_cfg():
     Expected outpt : data loaded into data variable
     """
     
-
-    jsonfile =  open("cfg.json", "r")
-    data = json.load(jsonfile)
-
-    print("Failed to read JSON Config File")    
+    try:
+        __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+        jsonfile = open(os.path.join(__location__, "cfg.json"))
+        data = json.load(jsonfile)
+    except IOError:
+        print("Failed to read JSON Config File")    
     return data
+
 
 
