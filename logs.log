@@ -10,3 +10,22 @@
 2022-01-08 18:17:35,925:INFO:Players : ['gabi17', 'Pascalopolis', 'Coconasu', 'GearMaker']
 2022-01-08 18:17:35,925:INFO:Status report : 1
 2022-01-08 18:17:35,925:INFO:=======================
+2022-01-09 13:40:49,224:INFO:Latency : 80.239
+2022-01-09 13:40:49,226:INFO:Server version : 1.16.5
+2022-01-09 13:40:49,226:INFO:Server MOTD : Danielosid Edition
+2022-01-09 13:40:49,226:INFO:Players : ['Coconasu', 'GearMaker']
+2022-01-09 13:40:49,227:INFO:Status report : 1
+2022-01-09 13:40:49,227:INFO:=======================
+2022-01-09 13:40:49,589:INFO:Latency : 83.146
+2022-01-09 13:40:49,589:INFO:Server version : 1.16.5
+2022-01-09 13:40:49,589:INFO:Server MOTD : Danielosid Edition
+2022-01-09 13:40:49,589:INFO:Players : ['Coconasu', 'GearMaker']
+2022-01-09 13:40:49,589:INFO:Status report : 1
+2022-01-09 13:40:49,589:INFO:=======================
+2022-01-09 13:41:13,401:ERROR:Socket timed out
+2022-01-09 13:41:13,401:INFO:Status report : 0
+2022-01-09 13:41:13,401:INFO:=======================
+2022-01-09 13:41:22,419:ERROR:Socket timed out
+2022-01-09 13:41:22,419:INFO:Status report : 0
+2022-01-09 13:41:22,419:INFO:=======================
+2022-01-09 13:41:23,962:INFO:Email sent

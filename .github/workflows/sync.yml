@@ -20,15 +20,7 @@ jobs:
       uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.SSH_KEY }}
-        known_hosts: ${{ secrets.KNOWN_HOSTS }}
-    - name: Sync files
-      uses: AEnterprise/rsync-deploy@v1.0
-      env:
-        DEPLOY_KEY: ${{ secrets.SSH_KEY }}
-        ARGS: "-e -c -r --delete"
-        SERVER_PORT: ${{ secrets.SERVER_PORT }}
-        FOLDER: "./"
-        SERVER_IP: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USER }}
-        SERVER_DESTINATION: ${{ secrets.FOLDER_PROD }}
+        known_hosts: ${{ secrets.SSH_HOSTS }}
+    - name: Deploy with rsync
+      run: rsync -avzn ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ubuntu/proiect
 
