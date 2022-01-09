@@ -1,28 +1,28 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+# # This workflow will install Python dependencies, run tests and lint with a single version of Python
+# # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Sync files to AWS
+# name: Sync files to AWS
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+# on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Install SSH key
-      uses: shimataro/ssh-key-action@v2
-      with:
-        key: ${{ secrets.SSH_KEY }}
-        known_hosts: 'placeholder'
-    - name: Adding Known Hosts
-      run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-    - name: Deploy with rsync
-      run: rsync -avzn ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ubuntu/proiect
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Install SSH key
+#       uses: shimataro/ssh-key-action@v2
+#       with:
+#         key: ${{ secrets.SSH_KEY }}
+#         known_hosts: 'placeholder'
+#     - name: Adding Known Hosts
+#       run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+#     - name: Deploy with rsync
+#       run: rsync -avzn ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ubuntu/proiect
 
