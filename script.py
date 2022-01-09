@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import logging
 from mcstatus import MinecraftServer
 import socket
