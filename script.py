@@ -4,9 +4,9 @@ from mcstatus import MinecraftServer
 import socket
 from functions import *
 
+config = open_cfg()
 
 logging.basicConfig(filename='logs.log', level=logging.INFO,format='%(asctime)s:%(levelname)s:%(message)s') #logging file config
-config = open_cfg()
 
 def CheckServerStatus():
     status_report = 0 #variable for "boolean"
