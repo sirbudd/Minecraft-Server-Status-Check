@@ -3,6 +3,7 @@ import logging
 from mcstatus import MinecraftServer
 import socket
 from functions import *
+import smtplib
 
 config = open_cfg()
 
