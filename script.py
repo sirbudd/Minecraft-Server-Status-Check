@@ -34,7 +34,7 @@ def CheckServerStatus():
 if __name__ == '__main__':
     CheckServerStatus()
     flag = CheckServerStatus()
-    print(f"flag = {flag}")
+    logging.info(f"flag = {flag}")
     if flag == 0:
         send_email()
-        print("email sent!")
+        logging.info("email sent!")
