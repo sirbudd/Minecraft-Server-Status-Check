@@ -24,7 +24,9 @@ The `"sender_email_address"` , `"sender_password"` can be left as is.
 
 Run `crontab -e` in your terminal and add the script to your crontab : 
 
-`*/10 * * * * /usr/bin/python3 /"your script location"/script.py >> ~/cron.log 2>&1`  -- this cronjob will run every 10 minutes.
+`*/10 * * * * /usr/bin/python3 /"your script location"/script.py >> ~/cron.log 2>&1`  
+
+-- this cronjob will run every 10 minutes.
 
 Run `crontab -l` in your terminal to check if they have been added.
 
