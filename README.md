@@ -1,6 +1,9 @@
 # Minecraft-Server-Status-Check
 Minecraft Server Status Check
 
+Simple python script using `mcstatus` to monitor your servers activity.
+The script has been deployed to a free tier AWS EC2 instance where it runs every X minutes (cronjob).
+
 ## Libriaries/Frameworks used
 
 1. [mcstatus](https://github.com/Dinnerbone/mcstatus)
@@ -10,21 +13,15 @@ Minecraft Server Status Check
 
 ## Configuring you parameters
 
-### The app is in main-app
-
 First open `cfg.json` and edit it for your needs.
 
 The `"server_ip"` parameter is for configuring your server ip that you want to inspect.
 
 The `"sender_email_address"` , `"sender_password"` can be left as is.
 
-## Running the app
-
-
-
 ## Adding cronjobs
 
-If you want to add those 2 python scripts to your crontab run `cronjob.py`.
+Run `crontab -e` in your terminal 
 
 Run `crontab -l` in your terminal to check if they have been added.
 
