@@ -4,6 +4,7 @@ from mcstatus import MinecraftServer
 import socket
 from functions import *
 from send_mail import *
+import datetime
 
 config = open_cfg()
 
@@ -15,14 +16,18 @@ def CheckServerStatus():
         server = MinecraftServer.lookup(config['server_ip'])                       #checking the desired server
         query = server.query()                                                     #query = for detailed information on the server
         status = server.status()                                                   #status = for not so detailted information on the server
+        
         logging.info(f"Latency : {status.latency}")
         logging.info(f"Server version : {query.software.version}")
-        logging.info(f"Server MOTD : {status.description}")
         logging.info(f"Players : {query.players.names}")
         
         status_report = 1                                                          # 1 = server UP/ 0 = server DOWN
         logging.info(f"Status report : {status_report}")
         logging.info(f"=======================")
+        
+        information = {'_id":' : datetime.datetime.now(),'Latency' : status.latency, "Players" : query.players.names, "Status" : status_report}
+        MongoDB(information)
+           
     except socket.timeout:
         logging.error("Socket timed out")
         status_report = 0
@@ -32,7 +37,7 @@ def CheckServerStatus():
 
 
 if __name__ == '__main__':
-    CheckServerStatus()
+    #CheckServerStatus()
     flag = CheckServerStatus()
     logging.info(f"flag = {flag}")
     if flag == 0:

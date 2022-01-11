@@ -1,12 +1,25 @@
 #!/usr/bin/python
-from multiprocessing import shared_memory
 import os
 import logging
 import json
+import pymongo
+from pymongo import MongoClient
+import smtplib 
+
 
 logging.basicConfig(filename='logs.log', level=logging.INFO,format='%(asctime)s:%(levelname)s:%(message)s') #logging file config
 
 #separate file for functions that are used globally
+
+def MongoDB(data):
+    """
+    Function for connecting to my my MongoDB
+    """
+    cluster = MongoClient("mongodb+srv://mcpython:mcpython123@cluster0.vqetj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority") #establising mongodb connection
+    db = cluster["minecraft"] #database name from MongoDB
+    collection = db["server-logs"]
+    collection.insert_one(data)
+
 
 def open_cfg():
     """
