@@ -25,8 +25,8 @@ def open_cfg():
     except IOError:
         print("Failed to read JSON Config File")    
     return data
-
 config = open_cfg()
+
 
 def MongoDB(data):
     """

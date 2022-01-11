@@ -5,6 +5,11 @@ cluster = pymongo.MongoClient("mongodb+srv://mcpython:mcpython123@cluster0.vqetj
 db = cluster["minecraft"] #database name from MongoDB
 collection = db["server-logs"]
 
-post = {"_id": 1, "name":"test1"}
-collection.insert_one(post)
+# post = {"_id": 1, "name":"test1"}
+# collection.insert_one(post)
+
+
+
+
+
 

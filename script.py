@@ -3,7 +3,6 @@ import logging
 from mcstatus import MinecraftServer
 import socket
 from functions import *
-#from send_mail import *
 import datetime
 
 config = open_cfg()
