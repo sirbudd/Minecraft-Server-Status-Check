@@ -12,7 +12,7 @@ The script has been deployed to a free tier AWS EC2 instance where it runs every
 2. [Crontab](https://pypi.org/project/python-crontab/)
     - `pip install python-crontab`
 2. [pymongo](https://pymongo.readthedocs.io/en/stable/)
-    - `pip install pymongo
+    - `pip install pymongo`
 
 ## Configuring you parameters
 
