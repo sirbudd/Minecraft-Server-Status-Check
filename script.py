@@ -3,7 +3,7 @@ import logging
 from mcstatus import MinecraftServer
 import socket
 from functions import *
-from send_mail import *
+#from send_mail import *
 import datetime
 
 config = open_cfg()
@@ -25,8 +25,8 @@ def CheckServerStatus():
         logging.info(f"Status report : {status_report}")
         logging.info(f"=======================")
         
-        information = {'_id":' : datetime.datetime.now(),'Latency' : status.latency, "Players" : query.players.names, "Status" : status_report}
-        MongoDB(information)
+        information = {'Date : ' : datetime.datetime.now(),'Latency' : status.latency, "Players" : query.players.names, "Status" : status_report}
+        MongoDB(information)                  
            
     except socket.timeout:
         logging.error("Socket timed out")
@@ -37,9 +37,7 @@ def CheckServerStatus():
 
 
 if __name__ == '__main__':
-    #CheckServerStatus()
     flag = CheckServerStatus()
     logging.info(f"flag = {flag}")
     if flag == 0:
         send_email()
-        logging.info("email sent!")
